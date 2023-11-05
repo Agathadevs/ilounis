@@ -43,7 +43,7 @@ class main(discord.Cog):
         await ctx.respond(f'You picked an animal type of `{animal_type}` that led you to pick `{animal}`!')
 
     @discord.slash_command(name="bmi",description="BMI計算機")
-    async def bmi(self,ctx: discord.ApplicationContext,height:discord.Option(int,description="身高"),weight:discord.Option(int,description="體重")):
+    async def bmi(self,ctx: discord.ApplicationContext,height:discord.Option(int,description="身高(cm)"),weight:discord.Option(int,description="體重(kg)")):
         BMI=weight / ((height/100)**2)
         await ctx.respond(f"{ctx.user.mention}你的BMI為**{BMI:.2f}**")
     
