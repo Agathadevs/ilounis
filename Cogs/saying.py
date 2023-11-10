@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import random
 
-url = 'https://www.lib.ncnu.edu.tw/index.php/tw/2012-03-07-13-55-04/%E7%89%B9%E5%88%A5%E5%B1%95%E7%A4%BA%E3%80%81%E7%89%B9%E5%88%A5%E6%B4%BB%E5%8B%95/2012-03-01-01-36-27.html'
+url = r'https://www.lib.ncnu.edu.tw/index.php/tw/2012-03-07-13-55-04/%E7%89%B9%E5%88%A5%E5%B1%95%E7%A4%BA%E3%80%81%E7%89%B9%E5%88%A5%E6%B4%BB%E5%8B%95/2012-03-01-01-36-27.html'
 data = requests.get(url) 
 soup=BeautifulSoup(data.text,'html5lib')
 soup=soup.css.select('tbody > tr')
